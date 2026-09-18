@@ -1,0 +1,39 @@
+workflows:
+  ios-unsigned:
+    name: CheckInReminder 云编译（免费 · 未签名）
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+    environment:
+      xcode: latest
+      vars:
+        XCODE_PROJECT: CheckInReminder.xcodeproj
+        XCODE_SCHEME: CheckInReminder
+    scripts:
+      - name: 编译（不签名）
+        script: |
+          set -e
+          xcodebuild build \
+            -project "$XCODE_PROJECT" \
+            -scheme "$XCODE_SCHEME" \
+            -configuration Release \
+            -sdk iphoneos \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            ONLY_ACTIVE_ARCH=NO
+      - name: 校验产物
+        script: |
+          set -e
+          APP="build/Release-iphoneos/${XCODE_SCHEME}.app"
+          test -d "$APP" || (echo "未找到 App 产物" && exit 1)
+          /usr/libexec/PlistBuddy -c 'Print :CFBundleDisplayName' "$APP/Info.plist"
+          ls "${APP}" | grep wav | head -4
+      - name: 打包 IPA
+        script: |
+          set -e
+          rm -rf Payload
+          mkdir -p Payload
+          cp -R "build/Release-iphoneos/${XCODE_SCHEME}.app" Payload/
+          zip -qry "${XCODE_SCHEME}.ipa" Payload
+          du -h "${XCODE_SCHEME}.ipa"
+    artifacts:
+      - CheckInReminder.ipa
