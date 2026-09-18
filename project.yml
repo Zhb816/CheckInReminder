@@ -18,6 +18,7 @@ targets:
   CheckInReminder:
     type: application
     platform: iOS
+    # 生成共享 scheme，Xcode Cloud / CI 需要它才能识别构建目标
     sources:
       - path: CheckInReminder/App
       - path: CheckInReminder/Models
@@ -41,3 +42,14 @@ targets:
     settings:
       PRODUCT_BUNDLE_IDENTIFIER: com.local.CheckInReminder
       SWIFT_EMIT_LOC_STRINGS: YES
+
+# 显式声明共享 scheme：Xcode Cloud / GitHub Actions 依赖它才能识别构建目标
+schemes:
+  CheckInReminder:
+    build:
+      targets:
+        CheckInReminder: all
+    run:
+      config: Debug
+    archive:
+      config: Release

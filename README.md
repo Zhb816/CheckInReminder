@@ -89,3 +89,34 @@ iOS 系统围栏（CLCircularRegion）官方建议半径 ≥ 100 米，30 米属
 **删掉不想要的**：自定义铃声右侧有垃圾桶图标，点一下删除并自动回退到默认铃声。
 
 > 注意：手机处于静音模式（侧边拨杆）时本地通知不会响铃，但依然会震动。想要静音也响铃需要申请 Critical Alerts 权限（需付费开发者账号 + 向苹果申请），本版本未启用。
+
+## 自动编译（GitHub Actions）
+
+仓库内置了 `.github/workflows/build.yml`，**每次推送到 main 都会自动在 GitHub 的 macOS 云主机上编译**，无需本机安装 Xcode。
+
+- 推送代码 → Actions 页自动跑 → 构建完成后在详情页底部 Artifacts 下载 `CheckInReminder.ipa`
+- 打 tag（`git tag v1.0 && git push --tags`）→ 自动把 ipa 发布到仓库的 Releases 页面
+
+**默认产出的是未签名 ipa**（stdlib 未签名 / ad-hoc），它不能直接装进 iPhone，需要你用 AltStore、SideStore 之类工具用自己的 Apple ID 重签后安装。
+
+**想让 CI 直接产出签好名的 ipa**，在仓库 `Settings → Secrets and variables → Actions` 里加三个变量：
+
+| Secret 名称 | 内容 | 获取方式 |
+|---|---|---|
+| `CERT_P12_BASE64` | 开发者证书（p12）的 base64 | 钥匙串里导出「Apple Development」证书为 .p12，然后 `base64 -i cert.p12` |
+| `CERT_P12_PASSWORD` | 导出 p12 时设的密码 | — |
+| `MOBILEPROVISION_BASE64` | 描述文件的 base64 | 从 [developer.apple.com](https://developer.apple.com/account/resources/profiles/list) 下载 `.mobileprovision`，然后 `base64 -i app.mobileprovision` |
+
+配好后 Actions 会自动用证书重签名。Ad Hoc 描述文件里包含的设备 UDID 才装得起来。
+
+## 能不能「点链接直接安装」
+
+不能——这是苹果的规则限制，与实现方式无关：
+
+| 方式 | 要求 | 结果 |
+|---|---|---|
+| Xcode 数据线安装 | 免费 Apple ID + 一台 Mac | 可用，**7 天过期**，重连一次即续 |
+| TestFlight | 付费开发者账号 ¥688/年 | 手机上点邀请链接即安装，最多 1 万人 |
+| App Store | 付费账号 + 审核 | 公开发布 |
+| 企业内部分发 | 企业账号 ¥1988/年 | 内网 `itms-services://` 链接直装 |
+| AltStore / SideStore | 免费 Apple ID + 一次电脑配置 | 手机上自助重签，需每 7 天续签一次 |
