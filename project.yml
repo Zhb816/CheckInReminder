@@ -1,0 +1,43 @@
+name: CheckInReminder
+
+options:
+  bundleIdPrefix: com.local
+  deploymentTarget:
+    iOS: "16.0"
+  groupSortPosition: top
+  createIntermediateGroups: true
+
+settings:
+  SWIFT_VERSION: "5.9"
+  TARGETED_DEVICE_FAMILY: 1,2
+  CODE_SIGN_STYLE: Automatic
+  MARKETING_VERSION: "1.0"
+  CURRENT_PROJECT_VERSION: "1"
+
+targets:
+  CheckInReminder:
+    type: application
+    platform: iOS
+    sources:
+      - path: CheckInReminder/App
+      - path: CheckInReminder/Models
+      - path: CheckInReminder/Services
+      - path: CheckInReminder/Views
+      - path: CheckInReminder/Assets.xcassets
+      - path: CheckInReminder/Resources
+        buildPhase: resources
+    info:
+      path: CheckInReminder/Info.plist
+      properties:
+        CFBundleDisplayName: 打卡提醒
+        ITSAppUsesNonExemptEncryption: false
+        LSRequiresIPhoneOS: true
+        UILaunchScreen: {}
+        UIBackgroundModes:
+          - location
+        NSLocationWhenInUseUsageDescription: 需要获取你的位置，用于判断是否进入或离开 A 区域
+        NSLocationAlwaysAndWhenInUseUsageDescription: 需要在后台持续获取位置，这样即使锁屏或切换到其他 App，离开 A 区域时也能及时提醒你打卡
+        NSLocationAlwaysUsageDescription: 需要在后台持续获取位置，用于在你离开 A 区域时提醒打卡
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.local.CheckInReminder
+      SWIFT_EMIT_LOC_STRINGS: YES

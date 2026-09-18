@@ -1,0 +1,22 @@
+# Xcode
+build/
+DerivedData/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+xcuserdata/
+project.xcworkspace/xcuserdata/
+
+# macOS
+.DS_Store
+.AppleDouble
+._*
+
+# IDE
+.vscode/
+.idea/

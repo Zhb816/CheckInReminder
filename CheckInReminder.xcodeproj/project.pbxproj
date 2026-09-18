@@ -1,0 +1,400 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E1385A0E18A581CA7380895 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DA8DFB17679E5E90A0E770 /* NotificationService.swift */; };
+		1DB8AD9E4303DB9E21A6D4C4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C814F3A320C3CF2EA460522D /* LocationManager.swift */; };
+		23EF9A76529F630F1F60D9C1 /* CheckInReminderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3F86178B3C93B73BC392B3 /* CheckInReminderApp.swift */; };
+		266A692058CE5D8BC20A06CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D37C64FC2C1A950A9EF5B25A /* Assets.xcassets */; };
+		2C15F28280788E8C831D0609 /* bell.wav in Resources */ = {isa = PBXBuildFile; fileRef = AA1DDC5C9BD0698101751241 /* bell.wav */; };
+		4D80BC8416B4D09153C8B8E0 /* SoundStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257A6072A6B54E231DD0CF03 /* SoundStore.swift */; };
+		5288DCB8CB7A2FEEAF80EBC9 /* ZoneMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA008EF4DD76F0AB5821546 /* ZoneMapView.swift */; };
+		64B63C1E07C6354FAE409086 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C402D373B6A4D524424F243 /* AppSettings.swift */; };
+		8654EE013CA23699FF0EB284 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4171288131DDF71FBBAB6109 /* SettingsView.swift */; };
+		A69436726406760FF3056192 /* reminder.wav in Resources */ = {isa = PBXBuildFile; fileRef = 34083542D05F27F6BD1435BD /* reminder.wav */; };
+		AD549C20157C4EB4D578ADE0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5411D91B34588C16E82FAB5C /* HomeView.swift */; };
+		B2220B121C46B20F9A9B619D /* ReminderEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B38E2CE9C0821F8132D4903 /* ReminderEngine.swift */; };
+		BC28E6235C2BB4EC23F97C26 /* LocationSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232A14D950AC0DA57AFA4A2E /* LocationSearch.swift */; };
+		CE184BB15B75EC3732E6D40A /* radar.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3F1198469A66AFC57B7D5EF0 /* radar.wav */; };
+		D8F56FF6001EE76C2B6883FC /* chime.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9DC5973802441C6AA6FD2A88 /* chime.wav */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1C402D373B6A4D524424F243 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		232A14D950AC0DA57AFA4A2E /* LocationSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearch.swift; sourceTree = "<group>"; };
+		257A6072A6B54E231DD0CF03 /* SoundStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundStore.swift; sourceTree = "<group>"; };
+		34083542D05F27F6BD1435BD /* reminder.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = reminder.wav; sourceTree = "<group>"; };
+		3F1198469A66AFC57B7D5EF0 /* radar.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = radar.wav; sourceTree = "<group>"; };
+		4171288131DDF71FBBAB6109 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		4B38E2CE9C0821F8132D4903 /* ReminderEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderEngine.swift; sourceTree = "<group>"; };
+		5411D91B34588C16E82FAB5C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		57DA8DFB17679E5E90A0E770 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		5CA008EF4DD76F0AB5821546 /* ZoneMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneMapView.swift; sourceTree = "<group>"; };
+		6C3F86178B3C93B73BC392B3 /* CheckInReminderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInReminderApp.swift; sourceTree = "<group>"; };
+		9DC5973802441C6AA6FD2A88 /* chime.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chime.wav; sourceTree = "<group>"; };
+		AA1DDC5C9BD0698101751241 /* bell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bell.wav; sourceTree = "<group>"; };
+		B059F7EC644BF9EB8BD3B1F6 /* CheckInReminder.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CheckInReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C814F3A320C3CF2EA460522D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		D37C64FC2C1A950A9EF5B25A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		021CC3882D30D55AE0EA763B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C814F3A320C3CF2EA460522D /* LocationManager.swift */,
+				57DA8DFB17679E5E90A0E770 /* NotificationService.swift */,
+				4B38E2CE9C0821F8132D4903 /* ReminderEngine.swift */,
+				257A6072A6B54E231DD0CF03 /* SoundStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		024162252ECF018353AA8FC8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AA1DDC5C9BD0698101751241 /* bell.wav */,
+				9DC5973802441C6AA6FD2A88 /* chime.wav */,
+				3F1198469A66AFC57B7D5EF0 /* radar.wav */,
+				34083542D05F27F6BD1435BD /* reminder.wav */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		10D0B00E47BAFD8CEF84CBC4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B059F7EC644BF9EB8BD3B1F6 /* CheckInReminder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A8A9BA6960E89147CB33ED7 = {
+			isa = PBXGroup;
+			children = (
+				F8F4C9FC4955BE30A3867B31 /* CheckInReminder */,
+				10D0B00E47BAFD8CEF84CBC4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7D2138D5577A3B242661E7FC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6C3F86178B3C93B73BC392B3 /* CheckInReminderApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A3BA85FAFFB9AD0DA1D6E1B8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5411D91B34588C16E82FAB5C /* HomeView.swift */,
+				232A14D950AC0DA57AFA4A2E /* LocationSearch.swift */,
+				4171288131DDF71FBBAB6109 /* SettingsView.swift */,
+				5CA008EF4DD76F0AB5821546 /* ZoneMapView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BD8738A9F91954FBFBE9FEBC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1C402D373B6A4D524424F243 /* AppSettings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F8F4C9FC4955BE30A3867B31 /* CheckInReminder */ = {
+			isa = PBXGroup;
+			children = (
+				7D2138D5577A3B242661E7FC /* App */,
+				BD8738A9F91954FBFBE9FEBC /* Models */,
+				024162252ECF018353AA8FC8 /* Resources */,
+				021CC3882D30D55AE0EA763B /* Services */,
+				A3BA85FAFFB9AD0DA1D6E1B8 /* Views */,
+				D37C64FC2C1A950A9EF5B25A /* Assets.xcassets */,
+			);
+			path = CheckInReminder;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5BA5B03734EF7112B4B20E75 /* CheckInReminder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1F6F232381591806DD56142 /* Build configuration list for PBXNativeTarget "CheckInReminder" */;
+			buildPhases = (
+				7AAABF4C879F672903A22FED /* Sources */,
+				B1D143C6FF2D81854CADA9DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CheckInReminder;
+			packageProductDependencies = (
+			);
+			productName = CheckInReminder;
+			productReference = B059F7EC644BF9EB8BD3B1F6 /* CheckInReminder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		298288867D8C35A8EB80C139 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					5BA5B03734EF7112B4B20E75 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DE1BE41463FC0E9AC3443001 /* Build configuration list for PBXProject "CheckInReminder" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 7A8A9BA6960E89147CB33ED7;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 10D0B00E47BAFD8CEF84CBC4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BA5B03734EF7112B4B20E75 /* CheckInReminder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B1D143C6FF2D81854CADA9DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				266A692058CE5D8BC20A06CB /* Assets.xcassets in Resources */,
+				2C15F28280788E8C831D0609 /* bell.wav in Resources */,
+				D8F56FF6001EE76C2B6883FC /* chime.wav in Resources */,
+				CE184BB15B75EC3732E6D40A /* radar.wav in Resources */,
+				A69436726406760FF3056192 /* reminder.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7AAABF4C879F672903A22FED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64B63C1E07C6354FAE409086 /* AppSettings.swift in Sources */,
+				23EF9A76529F630F1F60D9C1 /* CheckInReminderApp.swift in Sources */,
+				AD549C20157C4EB4D578ADE0 /* HomeView.swift in Sources */,
+				1DB8AD9E4303DB9E21A6D4C4 /* LocationManager.swift in Sources */,
+				BC28E6235C2BB4EC23F97C26 /* LocationSearch.swift in Sources */,
+				0E1385A0E18A581CA7380895 /* NotificationService.swift in Sources */,
+				B2220B121C46B20F9A9B619D /* ReminderEngine.swift in Sources */,
+				8654EE013CA23699FF0EB284 /* SettingsView.swift in Sources */,
+				4D80BC8416B4D09153C8B8E0 /* SoundStore.swift in Sources */,
+				5288DCB8CB7A2FEEAF80EBC9 /* ZoneMapView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3928F3F347FFCEA30680BD9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = CheckInReminder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.CheckInReminder;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7122A5F0B7CE871A2FD452B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = CheckInReminder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.CheckInReminder;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9A3E55F8B9044F729411FC5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C744807B68D21E2A2EA28EF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1F6F232381591806DD56142 /* Build configuration list for PBXNativeTarget "CheckInReminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7122A5F0B7CE871A2FD452B8 /* Debug */,
+				3928F3F347FFCEA30680BD9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DE1BE41463FC0E9AC3443001 /* Build configuration list for PBXProject "CheckInReminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A3E55F8B9044F729411FC5D /* Debug */,
+				C744807B68D21E2A2EA28EF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 298288867D8C35A8EB80C139 /* Project object */;
+}
