@@ -122,7 +122,19 @@ iOS 系统围栏（CLCircularRegion）官方建议半径 ≥ 100 米，30 米属
 
 > 免费层限制：单用户、1 个并行构建、单次最长 120 分钟、日志保留 30 天。不用绑信用卡。
 
-## 能不能「点链接直接安装」
+## 装上手机：全程不用 Mac
+
+编译好的 ipa 是**未签名**的，需要用自己的 Apple ID 重签后才能装。幸运的是，这一步现在可以在 iPhone 上自助完成：
+
+1. iPhone 用 Safari 打开 [SideInstaller](https://frizzlem.github.io/SideInstaller/)（开源，GitHub ⭐760）
+2. 装它给的 DNS Profile → 选一个证书点 Install → 打开装好的 SideInstaller
+3. 输入自己的 Apple ID → 点 **Install Sidestore**（Apple ID 只在本机使用，不上传）
+4. 去「设置 → 通用 → VPN 与设备管理」信任，然后删掉那个临时 DNS Profile
+5. 把 ipa 在「文件」App 里长按 → 共享 → SideStore，即完成安装
+
+之后 SideStore 每 7 天自动重签，App 不会失效。**整个过程不需要 Mac、不需要数据线。**
+
+> 旧办法是用电脑上的 AltServer 推一次 AltStore —— 如果你身边正好有台 Mac 倒是更省事，但没有也完全没关系。
 
 不能——这是苹果的规则限制，与实现方式无关：
 
