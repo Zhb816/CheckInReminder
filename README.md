@@ -109,6 +109,19 @@ iOS 系统围栏（CLCircularRegion）官方建议半径 ≥ 100 米，30 米属
 
 配好后 Actions 会自动用证书重签名。Ad Hoc 描述文件里包含的设备 UDID 才装得起来。
 
+## 用 Codemagic 免费云编译（无需 Xcode）
+
+仓库根目录的 `codemagic.yaml` 就是给 **Codemagic** 用的云编译配置。这家服务是专门做移动端 CI 的，免费层给 **每月 500 分钟 macOS M2 构建时长**，本 App 一次编译约 5–8 分钟，够跑几十次。
+
+步骤：
+
+1. 打开 [codemagic.io](https://codemagic.io)，用 GitHub 账号登录
+2. `Add application` → 选 GitHub → 授权后勾选 `Zhb816/CheckInReminder`
+3. 它会读到仓库里的 `codemagic.yaml`，选中 `CheckInReminder 云编译（免费 · 未签名）` 这条 workflow，点 **Start new build**
+4. 构建完成后在该次构建的 **Artifacts** 里下载 `CheckInReminder.ipa`
+
+> 免费层限制：单用户、1 个并行构建、单次最长 120 分钟、日志保留 30 天。不用绑信用卡。
+
 ## 能不能「点链接直接安装」
 
 不能——这是苹果的规则限制，与实现方式无关：
